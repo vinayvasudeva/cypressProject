@@ -1,0 +1,112 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-05-02T15:44:27.097Z",
+    "end": "2019-05-02T15:45:17.784Z",
+    "duration": 50687,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "21b00dfa-fdbb-46bd-b12f-26396d788a6c",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "37134e22-b149-4443-90de-6d457d3acec1",
+        "title": "UI Test Suite using Cypress",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Verify Assert Methods -1",
+            "fullTitle": "UI Test Suite using Cypress Verify Assert Methods -1",
+            "duration": 92,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "expect(true).to.equal(true);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "82eb63ec-886a-4c3c-bf6f-eeca27f87094",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "launch google and search your name",
+            "fullTitle": "UI Test Suite using Cypress launch google and search your name",
+            "duration": 7154,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "cy.visit('www.google.com');\ncy.get('[name=\"q\"]').focus().type('Cypress Documentation');\ncy.get('[value=\"Google Search\"]').eq(0).click();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "c46a71ba-f559-44d2-a24f-faea83eedecb",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "create travel ticket",
+            "fullTitle": "UI Test Suite using Cypress create travel ticket",
+            "duration": 33602,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "cy.visit('http://newtours.demoaut.com/');\ncy.log('Launched Tour & Travels Application');\ncy.screenshot(); //Login to Application\ncy.xpath(\"//input[@name='userName']\").type('mercury');\ncy.xpath(\"//input[@name='password']\").type('mercury');\ncy.xpath(\"//input[@name='login']\").click();\ncy.screenshot(); //Flight Details\ncy.get('[name=\"passCount\"]').focus().select('2');\ncy.get('[name=\"fromPort\"]').focus().select('Sydney');\ncy.get('[name=\"fromMonth\"]').focus().select('July');\ncy.get('[name=\"fromDay\"]').focus().select('16');\ncy.get('[name=\"toPort\"]').focus().select('Paris');\ncy.get('[name=\"toMonth\"]').focus().select('July');\ncy.get('[name=\"toDay\"]').focus().select('24');\ncy.screenshot(); //Preferences\ncy.get('[type=\"radio\"]').check('First');\ncy.xpath(\"//input[@name='findFlights']\").click();\ncy.xpath(\"//input[@name='reserveFlights']\").click();\ncy.screenshot(); //Passenger\ncy.xpath(\"//input[@name='passFirst0']\").type('Jon');\ncy.xpath(\"//input[@name='passLast0']\").type('Kesha'); //Credit Card\ncy.xpath(\"//input[@name='creditnumber']\").type('367502652456');\ncy.screenshot(); //Secure Payments\ncy.xpath(\"//input[@name='buyFlights']\").click(); //Get Flight Confirmation\ncy.xpath(\"//td[@class='frame_header_info']//font/b/font[1]\").invoke('text').should(function (text) {\n  cy.log(text);\n});\ncy.screenshot(); //Log Off\ncy.get('[href=\"mercurysignoff.php\"]').eq(0).click();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "903fa42a-caf9-4c44-a712-e53f026b16ad",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "82eb63ec-886a-4c3c-bf6f-eeca27f87094",
+          "c46a71ba-f559-44d2-a24f-faea83eedecb",
+          "903fa42a-caf9-4c44-a712-e53f026b16ad"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 40848,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2019
+}

@@ -1,0 +1,95 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-05-02T15:44:18.319Z",
+    "end": "2019-05-02T15:44:20.417Z",
+    "duration": 2098,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "926a4a8e-419b-4e88-a374-4531894b4984",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "38a5b4df-7220-4ba2-a63b-39e54985f2fb",
+        "title": "API Suite using Cypress",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Get Method - Pet Store",
+            "fullTitle": "API Suite using Cypress Get Method - Pet Store",
+            "duration": 1219,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "cy.request({\n  method: 'GET',\n  url: 'http://petstore.swagger.io/v2/pet/2',\n  response: []\n}).then(function (response) {\n  cy.log(response.body);\n  assert.equal(response.status, 200);\n  expect(response.body).is.not.null;\n});",
+            "err": {},
+            "isRoot": false,
+            "uuid": "19ec6b0e-b00b-4b9c-8876-513fab7815b6",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "Post Method - Store Order",
+            "fullTitle": "API Suite using Cypress Post Method - Store Order",
+            "duration": 795,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "cy.request('POST', 'http://petstore.swagger.io/v2/store/order', body).then(function (response) {\n  cy.log(response.body);\n  expect(response).to.have.property('headers');\n  expect(response.status).to.eq(200);\n  expect(response.body).is.not.null;\n});",
+            "err": {},
+            "isRoot": false,
+            "uuid": "26db6558-dbed-4af3-a162-b7dc3df54d44",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "19ec6b0e-b00b-4b9c-8876-513fab7815b6",
+          "26db6558-dbed-4af3-a162-b7dc3df54d44"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 2014,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2019
+}
